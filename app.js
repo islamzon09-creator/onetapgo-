@@ -1,13 +1,17 @@
 const defaults={
   language:'ar',names:'ليان & آدم',since:'2024-02-14',unlock:'2027-02-14T00:00:00+03:00',
-  songTitle:'كل ما أسمعها… أرجع لك',songSubtitle:'الأغنية التي تحمل صوت حكايتنا',audio:'',
+  songTitle:'كل ما أسمعها… أرجع لك',songSubtitle:'الأغنية التي تحمل صوت حكايتنا',audio:'assets/our-song.mp3',
   moments:[
     {date:'14.02.2024',title:'أول لقاء',text:'لحظة صغيرة غيّرت كل شيء بعدها.'},
     {date:'03.06.2024',title:'أول مغامرة لنا',text:'هناك عرفنا أن الطريق أجمل عندما نمشيه معًا.'},
     {date:'01.01.2025',title:'وعدنا',text:'اخترنا بعضنا، اليوم وكل يوم.'},
     {date:'TODAY',title:'وما زالت الحكاية مستمرة',text:'هذا ليس آخر فصل… بل أجمل بداية.'}
   ],
-  photos:[]
+  photos:[
+    {src:'assets/seaside.jpg',caption:'غروبنا الأول معًا'},
+    {src:'assets/cafe.jpg',caption:'الضحكة التي لا أنساها'},
+    {src:'assets/courtyard.jpg',caption:'ليلة تمنّيت ألا تنتهي'}
+  ]
 };
 const i18n={
  ar:{since:'منذ 14 فبراير 2024',story:'حكايتنا',intro:'ليست مجرد صور… هذه تفاصيل العمر الذي بدأ يوم التقينا.',open:'افتح ذكرياتنا',letter:'إذا مرّ يوم ونسيت كم أنت غالٍ عليّ، ارجع إلى هنا. كل صورة تحفظ ضحكة، وكل لحظة تروي فصلًا من حكايتنا. وما زالت أجمل فصولنا لم تُكتب بعد.',journeyKicker:'رحلتنا',journeyTitle:'من أول لقاء… إلى اليوم',memoriesKicker:'لحظاتنا',memoriesTitle:'ذكريات أحبها معك',ourSong:'أغنيتنا',futureKicker:'رسالة للمستقبل',futureTitle:'شيء جميل ينتظرك',futureText:'كتبت لك رسالة ستفتح في موعدها فقط.',days:'يوم',hours:'ساعة',minutes:'دقيقة',footer:'كل ذكرياتنا تعيش هنا'},
@@ -30,6 +34,7 @@ function render(){
 document.querySelectorAll('.language button').forEach(b=>b.onclick=()=>{data.language=b.dataset.lang;render()});
 const play=document.getElementById('playSong'),audio=document.getElementById('audio');play.onclick=()=>{if(!audio.src)return;if(audio.paused){audio.play();play.textContent='❚❚';play.closest('.song-card').classList.add('playing')}else{audio.pause();play.textContent='▶';play.closest('.song-card').classList.remove('playing')}};
 document.getElementById('closeLightbox').onclick=()=>document.getElementById('lightbox').close();
+const voiceButton=document.getElementById('playVoice');voiceButton.onclick=()=>{speechSynthesis.cancel();const card=voiceButton.closest('.voice-card');const u=new SpeechSynthesisUtterance('لو كنت تسمع هذه الرسالة، فأنا فقط أريد أن أذكرك أنك أجمل شيء حدث في حياتي، وأن حكايتنا ستبقى أجمل حكاياتي. أحبك، اليوم وكل يوم.');u.lang='ar-SA';u.rate=.82;u.pitch=.9;u.onstart=()=>{voiceButton.textContent='■';card.classList.add('playing')};u.onend=u.onerror=()=>{voiceButton.textContent='▶';card.classList.remove('playing')};speechSynthesis.speak(u)};
 function tick(){let diff=new Date(data.unlock)-new Date();if(diff<=0){document.getElementById('future').innerHTML='<div class="lock-ring">♡</div><h2>الرسالة أصبحت جاهزة</h2><p>هذه لحظتكما… افتحاها معًا.</p>';return}const d=Math.floor(diff/864e5);diff%=864e5;const h=Math.floor(diff/36e5);diff%=36e5;const m=Math.floor(diff/6e4);days.textContent=d;hours.textContent=String(h).padStart(2,'0');minutes.textContent=String(m).padStart(2,'0')}
 const observer=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 render();tick();setInterval(tick,30000);
