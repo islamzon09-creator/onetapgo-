@@ -1,0 +1,32 @@
+:root{
+  --cream:#fff9f7;
+  --paper:#ffffff;
+  --ink:#542f3b;
+  --muted:#9b7580;
+  --wine:#ec5f82;
+  --rose:#ff8fa7;
+  --gold:#e5a867;
+  --line:rgba(236,95,130,.18);
+  --shadow:0 24px 65px rgba(220,94,128,.15);
+}
+.petals{
+  background:
+    radial-gradient(circle at 7% 8%,rgba(255,142,173,.28),transparent 25%),
+    radial-gradient(circle at 95% 22%,rgba(255,195,116,.25),transparent 27%),
+    radial-gradient(circle at 42% 68%,rgba(255,210,220,.27),transparent 30%),
+    linear-gradient(145deg,#fffdfb,#fff0f4 48%,#fff8e9);
+}
+.language{background:rgba(255,255,255,.86);box-shadow:0 6px 20px rgba(230,105,140,.08)}
+.heart-seal span{color:#f0547a}.heart-seal:before{border-color:rgba(240,84,122,.38)}
+.heart-seal:after{border-color:rgba(245,174,94,.55)}
+.hero h1 em,.scroll-cue,.script{color:#e84f77}.hero-copy{color:#8b6570}
+.letter-card{background:rgba(255,255,255,.91);border-color:rgba(241,153,173,.42)}
+.wax{color:#fff;background:radial-gradient(circle at 32% 28%,#ff9db3,#ed5b7f 72%);box-shadow:0 10px 24px rgba(230,73,111,.24)}
+.moment:before{background:#fffafb;border-color:#f0a1b4}.memory{border-radius:20px;box-shadow:0 16px 34px rgba(222,90,124,.14)}
+.song-card{background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(255,238,242,.94));border-color:rgba(241,153,173,.36);border-radius:24px}
+.record{background:repeating-radial-gradient(circle,#ef7694 0 2px,#c94769 3px 5px)}
+.voice-card{background:linear-gradient(135deg,#ff9eb6,#ffbe9d);color:#63303d;border-radius:24px;border:1px solid rgba(255,255,255,.65);box-shadow:0 20px 55px rgba(232,91,126,.22)}
+.voice-play{border-color:#fff;background:rgba(255,255,255,.5);color:#d9426a}.voice-card small{color:#9f4861}.voice-card span{color:#955568}.wave i{background:#fff}
+.future-card{background:linear-gradient(150deg,rgba(255,255,255,.96),rgba(255,225,233,.9),rgba(255,244,218,.88));border-color:rgba(242,151,173,.5);border-radius:28px}
+.countdown div{background:rgba(255,255,255,.7);border-radius:13px;border-top-color:#ff9ab1}
+footer{background:linear-gradient(135deg,#ffb0c2,#ffd0ad);color:#6b3443}footer span{color:#9d6470}.tiny-heart{color:#ef5078}
