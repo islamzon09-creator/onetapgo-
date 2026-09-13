@@ -1,0 +1,22 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>أنشئ حكايتك — OneTapGo</title><link rel="stylesheet" href="creator.css"></head><body>
+<header><a href="/">ONE<span>TAP</span>GO</a><b>إنشاء هدية الذكريات</b></header>
+<main><div class="steps"><i class="on">1</i><span></span><i>2</i><span></span><i>3</i></div>
+<form id="memoryForm">
+ <section class="panel"><small>01 — البداية</small><h1>خلّينا نكتب حكايتكم ♡</h1><p>كل ما تضعه هنا سيظهر داخل صفحة الهدية الخاصة.</p>
+  <label>لغة الصفحة<select id="language"><option value="ar">العربية</option><option value="he">עברית</option></select></label>
+  <div class="two"><label>الاسم الأول<input id="name1" required placeholder="مثال: ليان"></label><label>الاسم الثاني<input id="name2" required placeholder="مثال: آدم"></label></div>
+  <label>تاريخ بداية الحكاية<input id="since" type="date" required></label>
+  <label>رسالتك الخاصة<textarea id="letter" rows="5" required placeholder="اكتب كلامًا من القلب…"></textarea></label>
+ </section>
+ <section class="panel"><small>02 — رحلة الحكاية</small><h2>أضيفوا محطاتكم</h2><p>ثلاث مراحل على الأقل، ويمكنكم إضافة ما تريدون.</p><div id="moments"></div><button class="ghost" type="button" id="addMoment">＋ إضافة مرحلة</button></section>
+ <section class="panel"><small>03 — الصور والصوت</small><h2>اللحظات التي لا تُنسى</h2>
+  <label class="drop"><input id="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple><b>＋ أضف الصور</b><span>حتى 15 صورة — ويمكن ترتيبها بعد الرفع</span></label><div id="photoList" class="photo-list"></div>
+  <label class="drop compact"><input id="song" type="file" accept="audio/*"><b>♫ أضف أغنيتكم</b><span id="songName">MP3 أو M4A</span></label>
+  <label class="drop compact"><input id="voice" type="file" accept="audio/*"><b>◉ أضف رسالة صوتية</b><span id="voiceName">تسجيل قصير من القلب</span></label>
+  <label>عنوان الأغنية<input id="songTitle" value="كل ما أسمعها… أرجع لك"></label>
+ </section>
+ <section class="panel"><small>04 — للمستقبل</small><h2>رسالة تنتظر موعدها</h2><label>تاريخ فتح الرسالة<input id="unlock" type="datetime-local"></label><label>الرسالة المستقبلية<textarea id="futureMessage" rows="4" placeholder="لن تظهر قبل الموعد…"></textarea></label></section>
+ <div class="actions"><button type="button" class="preview" id="preview">معاينة</button><button type="submit" class="publish" id="publish">إنشاء الرابط الخاص ♡</button></div><div id="progress"></div>
+</form></main>
+<dialog id="done"><div class="done-heart">♡</div><h2>حكايتكم أصبحت جاهزة</h2><p>هذا هو الرابط الذي يوضع داخل قلب الـNFC.</p><input id="resultUrl" readonly><div class="done-actions"><button id="copyUrl">نسخ الرابط</button><a id="openUrl" target="_blank">فتح الصفحة</a><a id="editUrl">تعديل الصفحة</a></div><small>احتفظ بهذا الجهاز لتستطيع تعديل الصفحة لاحقًا.</small></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="create.js"></script></body></html>

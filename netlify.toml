@@ -12,3 +12,18 @@
   from = "/memory-demo"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/m/*"
+  to = "/index.html?memory=:splat"
+  status = 200
+
+[[redirects]]
+  from = "/create"
+  to = "/create.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin.html"
+  status = 200
