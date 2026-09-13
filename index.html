@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7efe9">
+  <title>حكايتنا — OneTapGo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="OneTapGo">ONE<span>TAP</span>GO</a>
+    <div class="language"><button class="active" data-lang="ar">ع</button><button data-lang="he">ע</button></div>
+  </header>
+
+  <main id="top">
+    <section class="hero reveal">
+      <div class="eyebrow">A THOUSAND MOMENTS, ONE TOUCH</div>
+      <div class="heart-seal"><span>♡</span></div>
+      <p class="since" data-i18n="since">منذ 14 فبراير 2024</p>
+      <h1><span data-i18n="story">حكايتنا</span><em>ليان & آدم</em></h1>
+      <p class="hero-copy" data-i18n="intro">ليست مجرد صور… هذه تفاصيل العمر الذي بدأ يوم التقينا.</p>
+      <a class="scroll-cue" href="#letter"><span data-i18n="open">افتح ذكرياتنا</span><i>↓</i></a>
+    </section>
+
+    <section id="letter" class="letter-card reveal">
+      <span class="wax">♡</span>
+      <p class="script">To my forever person,</p>
+      <p data-i18n="letter">إذا مرّ يوم ونسيت كم أنت غالٍ عليّ، ارجع إلى هنا. كل صورة تحفظ ضحكة، وكل لحظة تروي فصلًا من حكايتنا. وما زالت أجمل فصولنا لم تُكتب بعد.</p>
+      <div class="signature">Yours, always ♡</div>
+    </section>
+
+    <section class="journey reveal">
+      <div class="section-heading"><span data-i18n="journeyKicker">رحلتنا</span><h2 data-i18n="journeyTitle">من أول لقاء… إلى اليوم</h2></div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section class="memories reveal">
+      <div class="section-heading"><span data-i18n="memoriesKicker">لحظاتنا</span><h2 data-i18n="memoriesTitle">ذكريات أحبها معك</h2></div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <section class="song-card reveal">
+      <div class="record"><div>♡</div></div>
+      <div class="song-info"><small data-i18n="ourSong">أغنيتنا</small><strong id="songTitle">كل ما أسمعها… أرجع لك</strong><span id="songSubtitle">الأغنية التي تحمل صوت حكايتنا</span></div>
+      <button id="playSong" class="play" aria-label="تشغيل">▶</button>
+      <audio id="audio"></audio>
+    </section>
+
+    <section id="future" class="future-card reveal">
+      <div class="lock-ring">⌁</div>
+      <span data-i18n="futureKicker">رسالة للمستقبل</span>
+      <h2 data-i18n="futureTitle">شيء جميل ينتظرك</h2>
+      <p data-i18n="futureText">كتبت لك رسالة ستفتح في موعدها فقط.</p>
+      <div id="unlockDate" class="unlock-date">14 فبراير 2027</div>
+      <div class="countdown"><div><b id="days">0</b><span data-i18n="days">يوم</span></div><div><b id="hours">00</b><span data-i18n="hours">ساعة</span></div><div><b id="minutes">00</b><span data-i18n="minutes">دقيقة</span></div></div>
+    </section>
+  </main>
+
+  <footer><div class="tiny-heart">♡</div><strong data-i18n="footer">كل ذكرياتنا تعيش هنا</strong><span>Powered by OneTapGo</span></footer>
+  <dialog id="lightbox"><button id="closeLightbox">×</button><img alt="ذكرى"><p></p></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
