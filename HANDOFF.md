@@ -1,4 +1,11 @@
 # Agent handoff — newest first
+## 2026-10-12 — Codex — owner confirmed Google Wallet API enabled
+Owner reports completion of the Google Cloud/Wallet API enablement step. Recorded as owner-confirmed in the local EYN Wallet setup artifact; this is not a successful authenticated API call. Issuer remains Demo; service account authorization, signing key, class, HTTPS runtime and actual handset save/update remain pending.
+
+Next owner step: create dedicated service account onetapgo-wallet in the selected Cloud project, leave optional project IAM grants empty, and provide its service-account email only. Then authorize that email as Developer in the Wallet issuer console. Keys remain private; no account permissions, credentials or live provider data were changed by Codex. Claude's EYN test-pass UI/review task remains pending.
+
+Reference: https://developers.google.com/wallet/retail/loyalty-cards/getting-started/auth/rest
+
 ## 2026-10-12 — Codex — Google issuer created in Demo mode
 Owner supplied Google Wallet console text confirming an Issuer ID and Demo mode. The non-secret issuer value is recorded only in the local private setup artifact, not repeated in this public log. First test remains EYN on Galaxy; iPhone Apple setup follows.
 
