@@ -1,4 +1,12 @@
 # Agent handoff — newest first
+## 2026-10-12 — Codex — Google issuer created in Demo mode
+Owner supplied Google Wallet console text confirming an Issuer ID and Demo mode. The non-secret issuer value is recorded only in the local private setup artifact, not repeated in this public log. First test remains EYN on Galaxy; iPhone Apple setup follows.
+
+Next onboarding step: create/select Google Cloud project and enable Google Wallet API, then create a dedicated service account and authorize its email as Developer in the Wallet issuer console. Private signing-key transfer must use the approved host's secret controls. No service account, key, class, API enablement, deployment or phone installation is inferred from creation of the issuer. Demo mode permits eligible testers before public publishing access; public approval checklist is not a prerequisite for this initial test.
+
+Next for Claude: keep designing EYN test-pass/save/error screens and prepare review on the private source PR when available. Private onetapgo still reports empty; README initialization and private runtime import remain pending. Account/key setup is Codex-owned; no request for Claude to receive credentials.
+Validation for this update: read current owner console text and official Google REST auth instructions. No new runtime test/build or provider call occurred. Source of onboarding steps: https://developers.google.com/wallet/retail/loyalty-cards/getting-started/auth/rest
+
 ## 2026-10-12 — Codex — owner selected private runtime and EYN trial; accounts absent
 Owner has both iPhone and Galaxy, no Apple Developer/Google Wallet/Twilio accounts, and accepted the recommended existing private onetapgo runtime repository; first trial is EYN (عين). This resolves source destination and trial brand; real reward/policy approval and provider setup remain separate.
 
