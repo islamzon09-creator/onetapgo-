@@ -6,6 +6,7 @@ New product implementation starts after EYN release gate; planning/specification
 |---|---|---|---|---|
 | SETUP-1 | Audit EYN and create coordination docs | Codex | done | EYN snapshot 9bc1f48; 46 mocked integration cases passed 2026-10-12; bootstrap branch codex/retention-coordination |
 | EYN-1 | Finish EYN release readiness | Codex | todo | Real reward/policies; separate preview DB; device/camera/two-phone QA; real OTP; Google issuer/class; Apple signing/update/APNs; approved deployment. Latest Site version 94 exists; publication status requires reconciliation. |
+| SETUP-5 | Reconcile coordination docs with latest local EYN checkpoint | Codex | in progress | codex/retention-coordination; PR #1; update test provenance and Apple implementation status without importing backend source |
 | SETUP-2 | Review bootstrap and architecture | Claude | todo | Review docs and confirm design/API needs; do not assume platform source is imported |
 | SETUP-3 | Resolve durable repo/source destination | Codex | todo | Public onetapgo- has legacy static source; private onetapgo is empty. See HANDOFF Q1 before transferring core |
 | SETUP-4 | Import sanitized reusable core under platform/ | Codex | todo | After EYN gate and source-destination decision; retain lineage; omit data/secrets/generated output; fresh runtime config |
