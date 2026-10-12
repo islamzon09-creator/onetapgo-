@@ -1,4 +1,31 @@
 # Agent handoff — newest first
+## 2026-10-12 — Codex — phone Wallet setup and explicit Claude handoff
+User requests continued coordination and an exact owner checklist to connect Wallet and test on a phone. Re-read AGENTS/PLAN/HANDOFF, inspected PR #1 discussion, searched claude/* branches and Claude-head PRs: no results/review found at this check. No Claude execution or acknowledgement is assumed. Verified islamzon09-creator/onetapgo is private, size 0, default branch main; runtime destination remains unapproved.
+
+### Next actions for Claude Code
+1. Open/review PR #1; read docs/contracts.md and docs/wallet-first-trial.md.
+2. Claim your work in PLAN on claude/<task>. Confirm /links/<slug>, /reviews/<slug>, /d/<code> ownership and contract feedback.
+3. Prepare an original mobile test-pass design and clear Arabic/Hebrew save/update/error instructions. Differentiate test pass, provider acknowledgement and actual device save/update.
+4. Once runtime source is accessible in the approved repository, review local checkpoint b0eecf7: Google class reuse/create, tenant scope, retry authorization/leases/backoff, Apple signatures/registration/update feed/unregistration. Do not approve runtime code solely from this docs PR.
+5. Reply at the top of HANDOFF with your branch/PR, completed work, validation and blocking questions. No keys, tester emails, phone numbers or customer data in public coordination files.
+
+### Exact owner inputs for the first phone trial
+- Choose the first test device: Android/Google Wallet or iPhone/Apple Wallet, and model/OS version. We can test one provider first.
+- Confirm runtime source goes into the existing PRIVATE onetapgo repo (recommended), or explicitly approve sanitized public source. If private is selected, initialize its main branch with a README through GitHub so both agents can open branches/PRs; do not transfer credentials or runtime data.
+- Google path: issuer account/Issuer ID, Google Cloud project with Wallet API and authorized service account; its signing key is configured ONLY in private runtime secret controls. Add the Gmail account on the test phone to the issuer's test-account list when using demo mode. Publishing access is not required for an eligible demo-mode tester.
+- Apple path: active Developer account with appropriate certificate permissions, Team ID, Pass Type ID and matching Pass Type signing certificate/private key. The private key stays in private secret controls; Codex prepares the matching WWDR chain and verifies signing. A certificate without its matching private key is insufficient.
+- Confirm the test store (EYN or a dedicated test store), authorized tester and test reward/policies. For the CURRENT full join→Wallet flow, real OTP verification is required: configure Twilio Account SID/Auth Token/Verify Service SID privately and authorize the specific test recipient. Existing loopback-only simulated members are not eligible for live issuance. Do not bypass this by marking demo phones verified.
+- Approve a separately reviewed HTTPS test deployment and isolated database before phone issuance. Hosted Apple update endpoints and pass images must be reachable by the device/provider; whole-site owner-login gating cannot be used to block those protocol requests. Retain pass authentication and owner/staff authorization.
+- Codex handles class provisioning, assets, strong internal secrets, APNs relay setup and scheduled retries; user need not choose cryptographic values or write server code. Paid resources require concrete cost approval before purchase.
+
+### Safe credential delivery
+User signs in directly to Google/Apple/provider dashboards; never send account passwords or MFA codes to Codex/Claude. Place private keys, service JSON and provider tokens in the chosen host's private secret settings, not chat, GitHub, screenshots or source. Only non-secret IDs/account availability and approval decisions belong in the reply. If no hosting secret UI is selected yet, settle the test host before transferring any secret.
+
+### Phone acceptance and gates
+First verify actual save and membership QR on the selected phone; then add a staff-confirmed point while the customer page is closed and verify the phone card update. Apple first-save test may precede hosted APNs setup, but closed-page automatic update acceptance requires the relay and periodic retry. Repeat reward/redemption and duplicate rejection. Android+iPhone, physical camera and real-provider checks remain pending; no new runtime test/build is claimed for this docs-only follow-up.
+
+Official references: [Google issuer onboarding](https://developers.google.com/wallet/retail/loyalty-cards/getting-started/issuer-onboarding), [Google demo-mode test accounts](https://developers.google.com/wallet/retail/loyalty-cards/test-and-go-live/request-publishing-access), [Apple Wallet identifiers/certificates](https://developer.apple.com/help/account/capabilities/create-wallet-identifiers-and-certificates).
+
 ## 2026-10-12 — Codex — actual local first trial and Wallet fixes
 Done: created local branch codex/wallet-first-trial, checkpoint b0eecf72f87b6fbba18e92f2d95eb06a05e5bcf4, extending the recovered EYN core. A new synthetic first-trial store ran in the actual local Worker/D1: registration, permanent QR, staff manual lookup, three purchases, one reward redemption, zero balance and disabled second redemption. Owner totals showed 3 added / 3 redeemed / 0 rewards. This is concrete local implementation, not the complete six-product platform.
 
