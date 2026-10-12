@@ -1,6 +1,6 @@
 # OneTapGo retention plan
 Statuses: todo / in progress / done. An in-progress task has one owner and a branch/PR in Notes. Each agent reads this before work and updates it after finishing.
-New product implementation starts after EYN release gate; planning/specifications may proceed now.
+The user authorized local implementation and first-trial preparation on 2026-10-12. EYN and new-platform production release remain gated by real provider/device validation; local synthetic work proceeds now.
 
 | ID | Task | Owner | Status | Notes |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@ New product implementation starts after EYN release gate; planning/specification
 | A-4 | Marketing pages and personalized /d/<code> demos | Claude | todo | All six product pages; synthetic demo logo/offer; no real issuance or lead send without authorization |
 | B-1 | Reusable join and punch-card engine | Codex | todo | Reuse verified-phone identity, consent, membership and ledger |
 | B-2 | Staff web app and owner dashboard | Codex | todo | Stamp/redeem; tenant/role checks; reports; backend/UI ownership stays Codex |
-| B-3 | Production Google and Apple Wallet passes/update pipeline | Codex | todo | Google and signed Apple adapters exist in local EYN continuation; secure configuration/APNs hosting and physical save/update tests remain required |
+| B-3 | Production Google and Apple Wallet passes/update pipeline | Codex | in progress | User prioritized Wallet. Codex is implementing per-store readiness, owner class setup and independent retry support in the local continuation on codex/wallet-first-trial; no runtime import to public repo. Secure configuration/APNs hosting and physical save/update tests remain required |
 | B-4 | Review B implementation and design integration | Claude | todo | Cross-tenant/replay tests and mobile/RTL review |
 | C-1 | Wheel specs and demo interaction | Claude | todo | Specify probabilities, exhausted quantities, expiry, eligibility, redemption |
 | C-2 | Atomic wheel allocations and prize verification | Codex | todo | Server RNG; no client-decided result; replay/concurrency/expiry tests |
