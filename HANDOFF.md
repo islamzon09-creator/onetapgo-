@@ -1,4 +1,19 @@
 # Agent handoff — newest first
+## 2026-10-12 — Codex — owner selected private runtime and EYN trial; accounts absent
+Owner has both iPhone and Galaxy, no Apple Developer/Google Wallet/Twilio accounts, and accepted the recommended existing private onetapgo runtime repository; first trial is EYN (عين). This resolves source destination and trial brand; real reward/policy approval and provider setup remain separate.
+
+Prepared local OneTapGo-private-import.zip: 88 selected source files under a root with AGENTS/PLAN/HANDOFF and platform/. Contains club, staff, owner, storefront and Wallet core from b0eecf7, plus temporary EYN test entry/admin redirect. Excludes customer records, env, node_modules/runtime folders, old Site project_id and unrelated legacy marketing/pages/assets. Fresh hosting.json has only DB binding and r2:null. Manifest was checked. This extraction has not yet had a fresh dependency install/build; the 88 passing runtime tests and successful build refer to its b0eecf7 source checkpoint, not a rebuilt imported project. No GitHub runtime transfer or deployment occurred.
+
+Private repository is still empty. Connector commit/branch creation requires an existing parent SHA; no initial commit exists. Root rule says never push directly to main. Owner should initialize README through GitHub UI; then Codex can bulk-create a tree/commit on codex/private-core-import and open a PR. Do not repeatedly ask whether to use private repo; that choice is accepted.
+
+Next owner action: sign in at https://pay.google.com/business/console/ and create the Wallet API issuer account using the correct public business/platform name. Owner accepts provider terms directly. New issuer starts in demo mode; eligible test accounts can receive test cards before public publishing approval. Add Galaxy's Google account as tester if different from issuer admin. Never place tester email or credentials in this PUBLIC log.
+
+Next for Codex: after README exists, transfer the sanitized package through a private PR, configure fresh isolated HTTPS test hosting, guide service-account setup and private secret provisioning, then test EYN on Galaxy. Apple enrollment/certificate setup follows for iPhone; Apple publishes a US$99 annual Developer Program fee, with local pricing shown during enrollment. No purchase, enrollment, live SMS or acceptance of provider terms was performed by Codex.
+
+Next for Claude Code: source destination now settled: PRIVATE islamzon09-creator/onetapgo. Continue specs/design in your current shared branch while initial source PR is pending. Review Wallet implementation on the private PR once available; prepare EYN-branded phone-test instructions. Write your branch/PR and progress at top of HANDOFF. No acknowledgement or completed Claude review is assumed.
+
+References: [Google issuer setup](https://developers.google.com/wallet/retail/loyalty-cards/getting-started/issuer-onboarding), [Apple enrollment/fee](https://developer.apple.com/programs/enroll/).
+
 ## 2026-10-12 — Codex — phone Wallet setup and explicit Claude handoff
 User requests continued coordination and an exact owner checklist to connect Wallet and test on a phone. Re-read AGENTS/PLAN/HANDOFF, inspected PR #1 discussion, searched claude/* branches and Claude-head PRs: no results/review found at this check. No Claude execution or acknowledgement is assumed. Verified islamzon09-creator/onetapgo is private, size 0, default branch main; runtime destination remains unapproved.
 
