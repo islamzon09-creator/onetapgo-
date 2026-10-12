@@ -4,9 +4,9 @@ New product implementation starts after EYN release gate; planning/specification
 
 | ID | Task | Owner | Status | Notes |
 |---|---|---|---|---|
-| SETUP-1 | Audit EYN and create coordination docs | Codex | done | EYN snapshot 9bc1f48; 46 mocked integration cases passed 2026-10-12; bootstrap branch codex/retention-coordination |
-| EYN-1 | Finish EYN release readiness | Codex | todo | Real reward/policies; separate preview DB; device/camera/two-phone QA; real OTP; Google issuer/class; Apple signing/update/APNs; approved deployment. Latest Site version 94 exists; publication status requires reconciliation. |
-| SETUP-5 | Reconcile coordination docs with latest local EYN checkpoint | Codex | in progress | codex/retention-coordination; PR #1; update test provenance and Apple implementation status without importing backend source |
+| SETUP-1 | Audit EYN and create coordination docs | Codex | done | Original EYN snapshot 9bc1f48: 46 cases; latest local continuation: 69 cases. See docs/eyn-summary.md for provenance; bootstrap PR #1 |
+| EYN-1 | Finish EYN release readiness | Codex | in progress | Local EYN checkpoint 5179aa9 has 69 passing cases, signed Apple pass/update code and a local preview. Await approved reward/policies, real SMS/Wallet accounts, hosted APNs relay, physical device/camera tests and release approval. v94 was saved without deployment when inspected; no production change. |
+| SETUP-5 | Reconcile coordination docs with latest local EYN checkpoint | Codex | done | codex/retention-coordination; PR #1; verified logs/provenance and corrected Apple/test status; documentation only, no backend import |
 | SETUP-2 | Review bootstrap and architecture | Claude | todo | Review docs and confirm design/API needs; do not assume platform source is imported |
 | SETUP-3 | Resolve durable repo/source destination | Codex | todo | Public onetapgo- has legacy static source; private onetapgo is empty. See HANDOFF Q1 before transferring core |
 | SETUP-4 | Import sanitized reusable core under platform/ | Codex | todo | After EYN gate and source-destination decision; retain lineage; omit data/secrets/generated output; fresh runtime config |
@@ -17,7 +17,7 @@ New product implementation starts after EYN release gate; planning/specification
 | A-4 | Marketing pages and personalized /d/<code> demos | Claude | todo | All six product pages; synthetic demo logo/offer; no real issuance or lead send without authorization |
 | B-1 | Reusable join and punch-card engine | Codex | todo | Reuse verified-phone identity, consent, membership and ledger |
 | B-2 | Staff web app and owner dashboard | Codex | todo | Stamp/redeem; tenant/role checks; reports; backend/UI ownership stays Codex |
-| B-3 | Production Google and Apple Wallet passes/update pipeline | Codex | todo | Google partial adapter; Apple unfinished; physical save/update tests required |
+| B-3 | Production Google and Apple Wallet passes/update pipeline | Codex | todo | Google and signed Apple adapters exist in local EYN continuation; secure configuration/APNs hosting and physical save/update tests remain required |
 | B-4 | Review B implementation and design integration | Claude | todo | Cross-tenant/replay tests and mobile/RTL review |
 | C-1 | Wheel specs and demo interaction | Claude | todo | Specify probabilities, exhausted quantities, expiry, eligibility, redemption |
 | C-2 | Atomic wheel allocations and prize verification | Codex | todo | Server RNG; no client-decided result; replay/concurrency/expiry tests |
