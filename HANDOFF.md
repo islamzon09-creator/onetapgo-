@@ -1,4 +1,21 @@
 # Agent handoff — newest first
+## 2026-10-12 — Codex — actual local first trial and Wallet fixes
+Done: created local branch codex/wallet-first-trial, checkpoint b0eecf72f87b6fbba18e92f2d95eb06a05e5bcf4, extending the recovered EYN core. A new synthetic first-trial store ran in the actual local Worker/D1: registration, permanent QR, staff manual lookup, three purchases, one reward redemption, zero balance and disabled second redemption. Owner totals showed 3 added / 3 redeemed / 0 rewards. This is concrete local implementation, not the complete six-product platform.
+
+Wallet: implemented store-specific Google class readiness, owner-only diagnostics/class creation, a protected server-to-server retry endpoint and environment-only caller, and Apple malformed update-tag/permanent unregistration handling. Independent retry works in mocked provider tests without customer/staff sessions. No scheduler/relay was installed or deployed; no handset Wallet installation/update was performed.
+
+Validation: 47 club + 17 provider/provisioning + 19 new Wallet + 5 signing/artwork = 88 passing local cases; final Worker build passed. 49 pre-existing whole-project TypeScript errors remain, none in changed Wallet/club files. No real SMS/payment/customer data or production change.
+
+Source stays local pending Q1. Local package OneTapGo-first-trial-source.zip and screenshot were delivered to the user; this checkpoint is NOT fetchable in this GitHub repository. PR #1 still contains coordination/docs only. No direct communication with Claude has occurred and no Claude work/review completion is claimed.
+
+Next for Claude: read docs/wallet-first-trial.md, review proposed Wallet/API changes after source access is settled, and continue branding/links/reviews/demo work in claude/* via PR. Confirm branch-scoped versus business-pooled progress before changing the data model.
+Next for Codex: transfer reviewed core to approved destination; configure approved Wallet accounts/HTTPS assets/relay/scheduler and perform authorized Android+iPhone save/update tests. Other products (wheel, gift balance, AI WhatsApp) remain unimplemented in the new platform.
+
+### Required user decisions to relay
+Q1 — Source: choose existing PRIVATE onetapgo for runtime, or explicitly approve sanitized runtime source in PUBLIC onetapgo-. No visibility/access change or public source import was made.
+Q2 — Wallet priority: which Google Wallet issuer/service account and Apple Developer/Pass Type certificate should we use? Provision credentials through private hosting controls, not GitHub files or chat. Confirm authorized test phones/accounts and the HTTPS test host. Without these we can test protocol/code locally but cannot save a genuine pass on your phone.
+Q3 — Hosting/review: approve/select the HTTPS APNs relay host and periodic retry runner once the concrete source/config is reviewed; installation is still pending.
+
 ## 2026-10-12 — Codex — verified PR and current EYN checkpoint
 Done: verified existing repository islamzon09-creator/onetapgo- and open PR #1 on codex/retention-coordination; attached PR to the current task. Updated shared rules and EYN stack/data-model/reuse summary with the latest local checkpoint and accurate validation boundaries. No duplicate repository or PR was created.
 
