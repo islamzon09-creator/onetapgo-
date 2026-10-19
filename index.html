@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#fbfdff">
+  <meta name="robots" content="noindex,nofollow,noarchive">
   <title>حكايتنا — OneTapGo</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="theme-vibrant.css?v=6">
@@ -23,6 +24,7 @@
   <div class="life-dots" aria-hidden="true"><i>♡</i><i>✦</i><i>♡</i><i>✧</i><i>♡</i></div>
   <header class="topbar">
     <a class="brand" href="#top" aria-label="OneTapGo">ONE<span>TAP</span>GO</a>
+    <div class="language" role="group" aria-label="اختيار اللغة"><button type="button" data-lang="ar" class="active">عربي</button><button type="button" data-lang="he">עברית</button></div>
   </header>
 
   <main id="top">
@@ -76,7 +78,7 @@
   </main>
 
   <footer><div class="tiny-heart">♡</div><strong data-i18n="footer">كل ذكرياتنا تعيش هنا</strong><span>Powered by OneTapGo</span></footer>
-  <dialog id="lightbox"><button id="closeLightbox">×</button><img alt="ذكرى"><p></p></dialog>
+  <dialog id="lightbox"><button id="closeLightbox" aria-label="إغلاق الصورة">×</button><img alt="ذكرى"><p></p></dialog>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script>
 </body>
 </html>
